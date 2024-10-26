@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">lab5_IOT_20180444</string>
+    <string-array name="genero_array">
+        <item>Hombre</item>
+        <item>Mujer</item>
+    </string-array>
+
+    <string-array name="nivel_actividad_array">
+        <item>Sedentario</item>
+        <item>Moderado</item>
+        <item>Activo</item>
+        <item>Muy Activo</item>
+    </string-array>
+
+    <string-array name="objetivo_array">
+        <item>Subir Peso</item>
+        <item>Bajar Peso</item>
+        <item>Mantener Peso</item>
+    </string-array>
+
+</resources>

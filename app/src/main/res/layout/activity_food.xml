@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.FoodActivity">
+
+    <!-- Botón de regreso con forma de flecha -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Regresar"
+        android:src="@android:drawable/ic_menu_revert"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp" />
+
+    <!-- Centrar el LinearLayout en el ConstraintLayout -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Campo para el nombre de la comida -->
+        <EditText
+            android:id="@+id/etNombreComida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de la comida"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Campo para las calorías de la comida -->
+        <EditText
+            android:id="@+id/etCaloriasComida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Calorías"
+            android:inputType="number"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Separador Visual -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botón para añadir la comida -->
+        <Button
+            android:id="@+id/btnAddFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Añadir Comida"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Separador Visual -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="16dp" />
+
+        <!-- RecyclerView para mostrar la lista de comidas -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1" />
+
+        <!-- TextView para mostrar las calorías totales consumidas -->
+        <TextView
+            android:id="@+id/tvTotalCalorias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calorías consumidas: 0 kcal"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnResetCalorias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resetear Calorías"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
